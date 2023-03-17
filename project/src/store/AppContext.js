@@ -2,15 +2,13 @@ import React,{ createContext, useContext} from "react";
 
 const AppContext = createContext();
 
-export const appProvider = ({children}) => {
+export const AppProvider = ({children}) => {
     return(
-        <>
-            <AppContext.Provider>
-             {children}
-            </AppContext.Provider>
-        </> 
+        <AppContext.Provider value={{}}>
+            {children}
+        </AppContext.Provider> 
     )
-}
+};
 
 const useAppContext = () => useContext(AppContext);
 
