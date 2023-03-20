@@ -11,8 +11,10 @@ function Checkbox() {
 
     const handleChecked = (event) => {
         setCheked(event.target.checked);
-      }
 
+        if(checked)encode();
+      }
+      console.log(handleChecked)
     return (
       <>
       <Container>
